@@ -104,7 +104,7 @@ def changing_rates(maximum, minimum, comp):
 
 
 def main():
-    print("Hello World!")
+    print('Choose a function:\n1.- ')
 
 if __name__=='__main__':
     main()
