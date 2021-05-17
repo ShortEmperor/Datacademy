@@ -106,7 +106,7 @@ def changing_rates(maximum, minimum, comp):
 
 def main():
     os.system('clear')
-    print('Choose a function:\n1.- Area of a Triangle\n2.- Determining the type of triangle\n3.-Scissors paper rock\n4.-Mile to km converter\n5.-Mi-Km and Km-Mi\n6.- Cilinder Volume\n7.- Volume calculator\n8.- Changing ranges')
+    print('Choose a function:\n1.- Area of a Triangle\n2.- Determining the type of triangle\n3.- Scissors paper rock\n4.- Mile to km converter\n5.-Mi-Km and Km-Mi\n6.- Cilinder Volume\n7.- Volume calculator\n8.- Changing ranges')
     
     # Because there is no switch statement I'll use if... for now, later I will add dictionary mapping
     
