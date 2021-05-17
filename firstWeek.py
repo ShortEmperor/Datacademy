@@ -1,3 +1,4 @@
+import os
 import math
 
 def TA(b, h):
@@ -17,8 +18,8 @@ def TAB(a,b,c):
 # All the inputs must be given in english
 # Possible inputs: "Rock", "Paper", "Scissors"
 def SPR(p1, p2):
-    p1, p2 = str
-    p1, p2 = p1.lower(), p2.lower()
+    p1 = p1.lower()
+    p2 = p2.lower()
     
     # Handeling bad input
     possible_input = ['rock', 'paper', 'scissors']
@@ -58,12 +59,12 @@ def conversor(cuantity):
     else:
         print("Invalid input!!!")
 
-def cilinder_volume(r, h):
+def cylinder_volume(r, h):
     return math.pi * r**2 * h
 
 def volume_calculator():
     # IDK what is the second one called in english
-    print('1.-Cube\n2.-Parallelepiped\n3.-Cilinder\n4.-Sphere\n5.-Cone')
+    print('1.-Cube\n2.-Parallelepiped\n3.-Cylinder\n4.-Sphere\n5.-Cone')
     choice = int(input('>>'))
     if choice == 1:
         # Must enter a number
@@ -104,7 +105,43 @@ def changing_rates(maximum, minimum, comp):
 
 
 def main():
-    print('Choose a function:\n1.- ')
+    os.system('clear')
+    print('Choose a function:\n1.- Area of a Triangle\n2.- Determining the type of triangle\n3.-Scissors paper rock\n4.-Mile to km converter\n5.-Mi-Km and Km-Mi\n6.- Cilinder Volume\n7.- Volume calculator\n8.- Changing ranges')
+    
+    # Because there is no switch statement I'll use if... for now, later I will add dictionary mapping
+    
+    redo = False
+    
+    ch = int(input(">>"))
+    
+    # Test
+    if ch == 1:
+        print(TA(5, 4))
+    elif ch == 2:
+        print(TAB(10, 10, 10))
+    elif ch == 3:
+        print(SPR('rock', 'Paper'))
+    elif ch == 4:
+        print(miles_to_km(10))
+    elif ch == 5:
+        print(conversor(10))
+    elif ch == 6:
+        print(cylinder_volume(1, 10))
+    elif ch == 7:
+        print(volume_calculator())
+    elif ch == 8:
+        print(changing_rates(100, 30, 101))
+    else:
+        print('Choose a real option!')
+    
+    # Run the program again
+    print("Wanna do it again? (y/N)")
+    re = str(input("\n>>"))
+    if re.lower() == 'y':
+        main()
+    else:
+        print("Goodbye!")
+        quit
 
 if __name__=='__main__':
     main()
